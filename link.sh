@@ -9,7 +9,9 @@ FILES="
 "
 
 for f in $FILES; do 
-	ln -s $DIR/$f $HOME/.$f
+	ln -s -i $DIR/$f $HOME/.$f
 done
 
-
+for f in $HOME/.mozilla/firefox/*.default/chrome; do
+	ln -s -i $DIR/firefox/profile/chrome/userChrome.css "$f"
+done

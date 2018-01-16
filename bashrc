@@ -21,3 +21,5 @@ ssh-pop() {
 		return 1
 	fi
 }
+
+alias stmux='tmuxp load shell'
