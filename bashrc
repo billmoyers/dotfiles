@@ -23,3 +23,10 @@ ssh-pop() {
 }
 
 alias stmux='tmuxp load shell'
+
+docker-rust(){
+	mkdir -p "$HOME/.cargo/registry"
+	docker run -it -w /src -v "$HOME/.cargo/registry":/usr/local/cargo/registry -v $(pwd):/src rust
+}
+
+alias date='date -Is'
